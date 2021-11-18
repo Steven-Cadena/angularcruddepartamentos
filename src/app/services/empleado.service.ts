@@ -21,7 +21,7 @@ export class ServiceEmpleados{
     }
 
     incrementarSalarioEmpleado(idempleado:string,incremento:string):Observable<any>{
-        var request = "/api/empleados/incrementarsalario" + idempleado + "/" + incremento;
+        var request = "/api/empleados/incrementarsalario/" + idempleado + "/" + incremento;
         var url = Global.urlempleadosaction + request;
         //enviaremos headers con POST y con PUT 
         var header = new Headers().set("Content-Type","application/json");

@@ -17,7 +17,8 @@ import { ServiceDepartamentos } from './services/departamento.service';
 import { InsertardepartamentoComponent } from './components/insertardepartamento/insertardepartamento.component';
 import { EditardepartamentoComponent } from './components/editardepartamento/editardepartamento.component';
 import { ServiceEmpleados } from './services/empleado.service';
-import { EmpleadosdepartamentoComponent } from './components/empleadosdepartamento/empleadosdepartamento.component'; 
+import { EmpleadosdepartamentoComponent } from './components/empleadosdepartamento/empleadosdepartamento.component';
+import { IncrementarsalariocomponentComponent } from './components/incrementarsalariocomponent/incrementarsalariocomponent.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { EmpleadosdepartamentoComponent } from './components/empleadosdepartamen
     HomeComponent,
     InsertardepartamentoComponent,
     EditardepartamentoComponent,
-    EmpleadosdepartamentoComponent
+    EmpleadosdepartamentoComponent,
+    IncrementarsalariocomponentComponent
   ],
   imports: [
     BrowserModule,
