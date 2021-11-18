@@ -1,0 +1,21 @@
+<h1>Editar departamento</h1>
+<a class="btn btn-danger" [routerLink]="['/']">
+    Vovler al listado
+</a><br/><br/>
+<form #updateForm="ngForm">
+    <input type="hidden"
+    value="{{departamento.numero}}"
+    #cajanumero name="cajanumero"/>
+
+    <label>Nombre:</label>
+    <input type="text" value="{{departamento.nombre}}"
+    name="cajanombre" #cajanombre class="form-control"/>
+    
+    <label>Localidad:</label>
+    <input type="text" value="{{departamento.localidad}}"
+     name="cajalocalidad" #cajalocalidad class="form-control"/><br/><br/>
+
+    <button (click)="updateDepartamento()" class="btn btn-success"> 
+        Modificar departamento
+    </button>
+</form>

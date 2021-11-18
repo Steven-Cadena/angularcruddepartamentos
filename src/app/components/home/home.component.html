@@ -1,0 +1,44 @@
+<h1>Home departamentos</h1>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Número</th>
+            <th>Nombre</th>
+            <th>Localidad</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+            <th>Ver Empleado</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="departamentos">
+        <tr *ngFor="let dept of departamentos">
+            <td>{{dept.numero}}</td>
+            <td>{{dept.nombre}}</td>
+            <td>{{dept.localidad}}</td>
+            <td>
+                <a class="btn btn-info"
+                [routerLink]="['/editar', dept.numero, dept.nombre, dept.localidad]"
+                >
+                    Editar
+                </a>
+            </td>
+            <td>
+                <!-- eliminar con un boton  -->
+                <button class="btn btn-danger" (click)="eliminarDepartamento(dept.numero)">Eliminar</button>
+                <!-- eliminar con un enlace routerLink -->
+                <a class="btn btn-success"
+                [routerLink]="['/eliminar', dept.numero]"
+                >
+                    Router link
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-secondary"
+                [routerLink]="['/empleados', dept.numero]"
+                >
+                    Empleados
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
